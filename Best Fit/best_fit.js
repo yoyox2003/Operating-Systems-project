@@ -96,6 +96,10 @@ document.getElementById("submitProc").onclick = function () {
             if (proc == memory[j].size && !allocatedflags[j]) {
                 allocation[j] = i;
                 allocatedflags[j] = true;
+                flag = true;
+                memory[j].used = true;
+                updateMemoryDisplay();
+                break;
             } else if (proc < memory[j].size && !allocatedflags[j]) {
                 let diff = memory[j].size - proc;
                 if (diff < temp) {
