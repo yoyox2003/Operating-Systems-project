@@ -95,7 +95,10 @@ document.getElementById("submitProc").onclick = function () {
                 allocation[j] = i;
                 allocatedflags[j] = true;
                 memory[j].size -= proc; // Update memory after allocation
-                memory.splice(j, 0, { size: proc, used: true });
+                if (memory[j].size == 0) {
+                    memory[j].size = proc;
+                    memory[j].used = true;
+                } else memory.splice(j, 0, { size: proc, used: true });
                 updateMemoryDisplay(); // Update the HTML display
                 flag = true;
                 break;
