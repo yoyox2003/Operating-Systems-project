@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../Assets/css.css" />
+    </head>
+    <body>
+        <h1>First-Fit Algorithm</h1>
+        <div class="input-container">
+            <label for="referenceString">Number of Frames:</label>
+            <div class="input-with-button">
+                <input
+                    type="number"
+                    id="numOfFrames"
+                    value=""
+                    placeholder="Enter Number of Frames"
+                />
+            </div>
+        </div>
+
+        <div class="input-container" id="frameSizes">
+            <button id="randSize">Random Sizes</button>
+            <button id="manualSize">Manual Sizes</button>
+        </div>
+
+        <div class="input-container" id="processes">
+            <label for="referenceString">Number of Processes:</label>
+            <input
+                type="number"
+                id="numOfProcess"
+                placeholder="Enter Number of Processes"
+            />
+            <div id="processContainer"></div>
+            <button id="submitProc">Submit</button>
+        </div>
+
+        <div id="output_fit"></div>
+
+        <button id="back">Main Menu</button>
+
+        <script src="first_fit.js"></script>
+    </body>
+</html>
